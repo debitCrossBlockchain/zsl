@@ -59,11 +59,16 @@ void TestUnshielding() {
 	}
 }
 
+void TestTransfer(){
+
+}
+
 int main()
 {
 	printf("hello from ConsoleApplication1!\n");
-	TestShielding();
+	//TestShielding();
 	TestUnshielding();
+	//TestTransfer();
 	int a = 0;
 	return 0;
 }
