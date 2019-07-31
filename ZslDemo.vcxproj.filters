@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="zsl\imp.tcc">
+      <Filter>zsl</Filter>
+    </ClCompile>
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_g1.cpp">
+      <Filter>zsl</Filter>
+    </ClCompile>
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_g2.cpp">
+      <Filter>zsl</Filter>
+    </ClCompile>
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_init.cpp">
+      <Filter>zsl</Filter>
+    </ClCompile>
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_pairing.cpp">
+      <Filter>zsl</Filter>
+    </ClCompile>
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_pp.cpp">
+      <Filter>zsl</Filter>
+    </ClCompile>
+    <ClCompile Include="zsl\common\profiling.cpp">
+      <Filter>zsl</Filter>
+    </ClCompile>
+    <ClCompile Include="zsl\common\utils.cpp">
+      <Filter>zsl</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\sha256.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\ZSLMerkleTree.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\NoteEncryption.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Note.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="zsl">
+      <UniqueIdentifier>{b44e048e-8a78-47d4-b448-6a1ace25d1b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{267db79e-ac1a-4235-87b6-9cdc682c62bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="zsl\zsl.h">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\basic_gadgets.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadget.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\protoboard.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\pb_variable.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\relations\constraint_satisfaction_problems\r1cs\r1cs.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\utils.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\relations\variable.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\fields\bigint.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\serialization.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\profiling.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\zk_proof_systems\ppzksnark\r1cs_ppzksnark\r1cs_ppzksnark.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\curves\public_params.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\data_structures\accumulation_vector.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\data_structures\sparse_vector.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\scalar_multiplication\multiexp.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\scalar_multiplication\wnaf.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\knowledge_commitment\knowledge_commitment.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\fields\fp.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\exponentiation\exponentiation.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\fields\field_utils.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\zk_proof_systems\ppzksnark\r1cs_ppzksnark\r1cs_ppzksnark_params.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\scalar_multiplication\kc_multiexp.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\reductions\r1cs_to_qap\r1cs_to_qap.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\relations\arithmetic_programs\qap\qap.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\evaluation_domain\evaluation_domain.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\evaluation_domain\domains\basic_radix2_domain.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\evaluation_domain\domains\basic_radix2_domain_aux.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\evaluation_domain\domains\extended_radix2_domain.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\evaluation_domain\domains\step_radix2_domain.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\default_types\r1cs_ppzksnark_pp.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\default_types\ec_pp.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_gadget.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\data_structures\merkle_tree.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\hash_io.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_components.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_aux.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\merkle_tree\merkle_tree_check_read_gadget.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\crh_gadget.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\knapsack\knapsack_gadget.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\common\rng.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\digest_selector_gadget.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgetlib1\gadgets\merkle_tree\merkle_authentication_path_variable.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_pp.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_init.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\fields\fp2.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\fields\fp6_3over2.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\fields\fp12_2over3over2.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_g1.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\curves\curve_utils.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_g2.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_pairing.hpp">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="zsl\gadgets.tcc">
+      <Filter>zsl</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\common.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\sha256.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\ZSLMerkleTree.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\NoteEncryption.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Note.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="zsl\common\utils.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\relations\variable.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\common\serialization.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\fields\bigint.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\pb_variable.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\relations\constraint_satisfaction_problems\r1cs\r1cs.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\protoboard.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadget.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\basic_gadgets.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\common\data_structures\sparse_vector.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\scalar_multiplication\multiexp.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\fields\fp_aux.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\scalar_multiplication\wnaf.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\common\data_structures\accumulation_vector.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\exponentiation\exponentiation.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\fields\fp.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\fields\field_utils.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\knowledge_commitment\knowledge_commitment.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\zk_proof_systems\ppzksnark\r1cs_ppzksnark\r1cs_ppzksnark.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\scalar_multiplication\kc_multiexp.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\evaluation_domain\evaluation_domain.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\evaluation_domain\domains\basic_radix2_domain.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\evaluation_domain\domains\basic_radix2_domain_aux.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\evaluation_domain\domains\extended_radix2_domain.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\evaluation_domain\domains\step_radix2_domain.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\relations\arithmetic_programs\qap\qap.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\reductions\r1cs_to_qap\r1cs_to_qap.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\common\data_structures\merkle_tree.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\hashes\hash_io.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_aux.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_components.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_gadget.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\hashes\knapsack\knapsack_gadget.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\common\rng.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\hashes\digest_selector_gadget.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\merkle_tree\merkle_authentication_path_variable.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\gadgetlib1\gadgets\merkle_tree\merkle_tree_check_read_gadget.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\fields\fp2.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\fields\fp6_3over2.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\fields\fp12_2over3over2.tcc">
+      <Filter>zsl</Filter>
+    </None>
+    <None Include="zsl\algebra\curves\curve_utils.tcc">
+      <Filter>zsl</Filter>
+    </None>
+  </ItemGroup>
+</Project>

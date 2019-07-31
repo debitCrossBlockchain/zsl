@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{56a2f6ec-29c2-4c5c-ad0a-bc14cd929ec7}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>ZslDemo</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+    <ProjectName>ZslDemo</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <MultiProcNumber>4</MultiProcNumber>
+    <RemoteProjectDir>$(RemoteRootDir)/zsl</RemoteProjectDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils\Note.cpp" />
+    <ClCompile Include="utils\NoteEncryption.cpp" />
+    <ClCompile Include="utils\sha256.cpp" />
+    <ClCompile Include="utils\ZSLMerkleTree.cpp" />
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_g1.cpp" />
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_g2.cpp" />
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_init.cpp" />
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_pairing.cpp" />
+    <ClCompile Include="zsl\algebra\curves\alt_bn128\alt_bn128_pp.cpp" />
+    <ClCompile Include="zsl\common\profiling.cpp" />
+    <ClCompile Include="zsl\common\utils.cpp" />
+    <ClCompile Include="zsl\imp.tcc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utils\common.h" />
+    <ClInclude Include="utils\Note.h" />
+    <ClInclude Include="utils\NoteEncryption.h" />
+    <ClInclude Include="utils\sha256.h" />
+    <ClInclude Include="utils\ZSLMerkleTree.h" />
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_g1.hpp" />
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_g2.hpp" />
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_init.hpp" />
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_pairing.hpp" />
+    <ClInclude Include="zsl\algebra\curves\alt_bn128\alt_bn128_pp.hpp" />
+    <ClInclude Include="zsl\algebra\curves\curve_utils.hpp" />
+    <ClInclude Include="zsl\algebra\curves\public_params.hpp" />
+    <ClInclude Include="zsl\algebra\evaluation_domain\domains\basic_radix2_domain.hpp" />
+    <ClInclude Include="zsl\algebra\evaluation_domain\domains\basic_radix2_domain_aux.hpp" />
+    <ClInclude Include="zsl\algebra\evaluation_domain\domains\extended_radix2_domain.hpp" />
+    <ClInclude Include="zsl\algebra\evaluation_domain\domains\step_radix2_domain.hpp" />
+    <ClInclude Include="zsl\algebra\evaluation_domain\evaluation_domain.hpp" />
+    <ClInclude Include="zsl\algebra\exponentiation\exponentiation.hpp" />
+    <ClInclude Include="zsl\algebra\fields\bigint.hpp" />
+    <ClInclude Include="zsl\algebra\fields\field_utils.hpp" />
+    <ClInclude Include="zsl\algebra\fields\fp.hpp" />
+    <ClInclude Include="zsl\algebra\fields\fp12_2over3over2.hpp" />
+    <ClInclude Include="zsl\algebra\fields\fp2.hpp" />
+    <ClInclude Include="zsl\algebra\fields\fp6_3over2.hpp" />
+    <ClInclude Include="zsl\algebra\knowledge_commitment\knowledge_commitment.hpp" />
+    <ClInclude Include="zsl\algebra\scalar_multiplication\kc_multiexp.hpp" />
+    <ClInclude Include="zsl\algebra\scalar_multiplication\multiexp.hpp" />
+    <ClInclude Include="zsl\algebra\scalar_multiplication\wnaf.hpp" />
+    <ClInclude Include="zsl\common\data_structures\accumulation_vector.hpp" />
+    <ClInclude Include="zsl\common\data_structures\merkle_tree.hpp" />
+    <ClInclude Include="zsl\common\data_structures\sparse_vector.hpp" />
+    <ClInclude Include="zsl\common\default_types\ec_pp.hpp" />
+    <ClInclude Include="zsl\common\default_types\r1cs_ppzksnark_pp.hpp" />
+    <ClInclude Include="zsl\common\profiling.hpp" />
+    <ClInclude Include="zsl\common\rng.hpp" />
+    <ClInclude Include="zsl\common\serialization.hpp" />
+    <ClInclude Include="zsl\common\utils.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadget.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\basic_gadgets.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\crh_gadget.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\digest_selector_gadget.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\hash_io.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\knapsack\knapsack_gadget.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_aux.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_components.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_gadget.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\merkle_tree\merkle_authentication_path_variable.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\gadgets\merkle_tree\merkle_tree_check_read_gadget.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\pb_variable.hpp" />
+    <ClInclude Include="zsl\gadgetlib1\protoboard.hpp" />
+    <ClInclude Include="zsl\gadgets.tcc" />
+    <ClInclude Include="zsl\reductions\r1cs_to_qap\r1cs_to_qap.hpp" />
+    <ClInclude Include="zsl\relations\arithmetic_programs\qap\qap.hpp" />
+    <ClInclude Include="zsl\relations\constraint_satisfaction_problems\r1cs\r1cs.hpp" />
+    <ClInclude Include="zsl\relations\variable.hpp" />
+    <ClInclude Include="zsl\zk_proof_systems\ppzksnark\r1cs_ppzksnark\r1cs_ppzksnark.hpp" />
+    <ClInclude Include="zsl\zk_proof_systems\ppzksnark\r1cs_ppzksnark\r1cs_ppzksnark_params.hpp" />
+    <ClInclude Include="zsl\zsl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="zsl\algebra\curves\curve_utils.tcc" />
+    <None Include="zsl\algebra\evaluation_domain\domains\basic_radix2_domain.tcc" />
+    <None Include="zsl\algebra\evaluation_domain\domains\basic_radix2_domain_aux.tcc" />
+    <None Include="zsl\algebra\evaluation_domain\domains\extended_radix2_domain.tcc" />
+    <None Include="zsl\algebra\evaluation_domain\domains\step_radix2_domain.tcc" />
+    <None Include="zsl\algebra\evaluation_domain\evaluation_domain.tcc" />
+    <None Include="zsl\algebra\exponentiation\exponentiation.tcc" />
+    <None Include="zsl\algebra\fields\bigint.tcc" />
+    <None Include="zsl\algebra\fields\field_utils.tcc" />
+    <None Include="zsl\algebra\fields\fp.tcc" />
+    <None Include="zsl\algebra\fields\fp12_2over3over2.tcc" />
+    <None Include="zsl\algebra\fields\fp2.tcc" />
+    <None Include="zsl\algebra\fields\fp6_3over2.tcc" />
+    <None Include="zsl\algebra\fields\fp_aux.tcc" />
+    <None Include="zsl\algebra\knowledge_commitment\knowledge_commitment.tcc" />
+    <None Include="zsl\algebra\scalar_multiplication\kc_multiexp.tcc" />
+    <None Include="zsl\algebra\scalar_multiplication\multiexp.tcc" />
+    <None Include="zsl\algebra\scalar_multiplication\wnaf.tcc" />
+    <None Include="zsl\common\data_structures\accumulation_vector.tcc" />
+    <None Include="zsl\common\data_structures\merkle_tree.tcc" />
+    <None Include="zsl\common\data_structures\sparse_vector.tcc" />
+    <None Include="zsl\common\rng.tcc" />
+    <None Include="zsl\common\serialization.tcc" />
+    <None Include="zsl\common\utils.tcc" />
+    <None Include="zsl\gadgetlib1\gadget.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\basic_gadgets.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\hashes\digest_selector_gadget.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\hashes\hash_io.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\hashes\knapsack\knapsack_gadget.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_aux.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_components.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\hashes\sha256\sha256_gadget.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\merkle_tree\merkle_authentication_path_variable.tcc" />
+    <None Include="zsl\gadgetlib1\gadgets\merkle_tree\merkle_tree_check_read_gadget.tcc" />
+    <None Include="zsl\gadgetlib1\pb_variable.tcc" />
+    <None Include="zsl\gadgetlib1\protoboard.tcc" />
+    <None Include="zsl\reductions\r1cs_to_qap\r1cs_to_qap.tcc" />
+    <None Include="zsl\relations\arithmetic_programs\qap\qap.tcc" />
+    <None Include="zsl\relations\constraint_satisfaction_problems\r1cs\r1cs.tcc" />
+    <None Include="zsl\relations\variable.tcc" />
+    <None Include="zsl\zk_proof_systems\ppzksnark\r1cs_ppzksnark\r1cs_ppzksnark.tcc" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>/root/projects/zsl/merkel;/root/projects/zsl/zcash;/root/projects/zsl/crypto;/root/projects/zsl/zsl;/root/projects/zsl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <CppLanguageStandard>c++11</CppLanguageStandard>
+      <CLanguageStandard>c11</CLanguageStandard>
+      <PreprocessorDefinitions>CURVE_ALT_BN128;BINARY_OUTPUT;HAVE_BYTESWAP_H;MONTGOMERY_OUTPUT;MULTICORE;NO_PROCPS;NO_PT_COMPRESSION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>-fopenmp %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>/usr/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>gmpxx;gmp;boost_system;gomp;ncurses;crypto</LibraryDependencies>
+      <IgnoreDefaultLibraries>false</IgnoreDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>/root/projects/zsl/merkel;/root/projects/zsl/zcash;/root/projects/zsl/crypto;/root/projects/zsl/zsl;/root/projects/zsl;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);CURVE_ALT_BN128;BINARY_OUTPUT;MONTGOMERY_OUTPUT;MULTICORE</PreprocessorDefinitions>
+      <CLanguageStandard>c11</CLanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>/usr/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LibraryDependencies>gmpxx;gmp;boost_system;gomp;ncurses;crypto</LibraryDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
