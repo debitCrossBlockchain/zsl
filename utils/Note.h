@@ -2,6 +2,7 @@
 #define NOTE_H_
 #include <cstdio>
 #include <iostream>
+#include <utils/NoteEncryption.h>
 class BaseNote{
 protected:
 	uint64_t value_ = 0;
@@ -14,21 +15,22 @@ public:
 
 class SproutNote : public BaseNote {
 public:
+	std::string a_sk_;
 	std::string a_pk_;
 	std::string rho_;
 
-	SproutNote(std::string a_pk, uint64_t value, std::string rho)
-		: BaseNote(value), a_pk_(a_pk), rho_(rho){}
-
+	SproutNote(NoteEncryption& obj, uint64_t value, std::string rho);
 	SproutNote(){}
 
 	virtual ~SproutNote(){}
 
 	std::string cm();
-
-	//std::string nullifier(const SproutSpendingKey& a_sk) const;
+	std::string SendNullifier();
+	std::string SpendNullifier();
 private:
 	void cm(unsigned char* rho, unsigned char* pk, uint64_t value, unsigned char* output);
+	void SendNullifier(unsigned char* rho, unsigned char* send_nf);
+	void SpendNullifier(unsigned char* rho, unsigned char* sk, unsigned char* spend_nf);
 };
 
 

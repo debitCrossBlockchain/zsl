@@ -107,7 +107,7 @@ std::string static inline ArrayToHexString(unsigned char* array, int len) {
 void static inline sha256(unsigned char* input,int64_t length, unsigned char* output) {
 	CSHA256 hasher;
 	hasher.Write(input, length);
-	hasher.FinalizeNoPadding(output);
+	hasher.Finalize(output);
 }
 
 void static inline Sha256Compress(unsigned char* a, unsigned char* b, unsigned char* output) {

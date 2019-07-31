@@ -38,6 +38,9 @@
     <ClCompile Include="utils\Note.cpp">
       <Filter>utils</Filter>
     </ClCompile>
+    <ClCompile Include="api\ZslApi.cpp">
+      <Filter>api</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="zsl">
@@ -45,6 +48,9 @@
     </Filter>
     <Filter Include="utils">
       <UniqueIdentifier>{267db79e-ac1a-4235-87b6-9cdc682c62bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="api">
+      <UniqueIdentifier>{b96f23f8-8681-4318-90b1-a56786ae826b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +227,9 @@
     </ClInclude>
     <ClInclude Include="utils\Note.h">
       <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="api\ZslApi.h">
+      <Filter>api</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -78,8 +78,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <MultiProcNumber>4</MultiProcNumber>
     <RemoteProjectDir>$(RemoteRootDir)/zsl</RemoteProjectDir>
+    <OutDir>\root\projects\ZslDemo\bin\x64\Debug\</OutDir>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="api\ZslApi.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="utils\Note.cpp" />
     <ClCompile Include="utils\NoteEncryption.cpp" />
@@ -95,6 +97,7 @@
     <ClCompile Include="zsl\imp.tcc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="api\ZslApi.h" />
     <ClInclude Include="utils\common.h" />
     <ClInclude Include="utils\Note.h" />
     <ClInclude Include="utils\NoteEncryption.h" />

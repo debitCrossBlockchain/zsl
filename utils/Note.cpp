@@ -1,5 +1,8 @@
 #include "Note.h"
 #include "common.h"
+SproutNote::SproutNote(NoteEncryption& obj, uint64_t value, std::string rho)
+	: BaseNote(value), a_sk_(obj.GetEsk()),a_pk_(obj.GetEsk()), rho_(rho){
+}
 std::string SproutNote::cm(){
 	unsigned char output[32];
 	unsigned char rho[32];
@@ -17,4 +20,43 @@ void SproutNote::cm(unsigned char* rho, unsigned char* pk, uint64_t value, unsig
 	auto value_vec = convertIntToVectorLE_(value);
 	hasher.Write(&value_vec[0], value_vec.size());
 	hasher.Finalize(output);
+}
+
+std::string SproutNote::SendNullifier() {
+	unsigned char e_rho[32];
+	unsigned char send_nf[32];
+	HexStringToArray(rho_, e_rho);
+	SendNullifier(e_rho, send_nf);
+	return ArrayToHexString(send_nf, 32);
+}
+
+void SproutNote::SendNullifier(unsigned char* rho, unsigned char* send_nf){
+	unsigned char data[33];
+	data[0] = 0x00;
+	for (int i = 0; i < 32; i++) {
+		data[i + 1] = rho[i];
+	}
+	sha256(data, 33, send_nf);
+}
+
+std::string SproutNote::SpendNullifier(){
+	unsigned char e_rho[32];
+	unsigned char e_sk[32];
+	unsigned char spend_nf[32];
+	HexStringToArray(rho_, e_rho);
+	HexStringToArray(a_sk_, e_sk);
+	SpendNullifier(e_rho,e_sk,spend_nf);
+	return ArrayToHexString(spend_nf, 32);
+}
+
+void SproutNote::SpendNullifier(unsigned char* rho, unsigned char* sk, unsigned char* spend_nf){
+	unsigned char data[65];
+	data[0] = 0x01;
+	for (int i = 0; i < 32; i++) {
+		data[i + 1] = rho[i];
+	}
+	for (int i = 0; i < 32; i++) {
+		data[i + 33] = sk[i];
+	}
+	sha256(data, 65, spend_nf);
 }

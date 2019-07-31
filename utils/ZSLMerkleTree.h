@@ -10,7 +10,7 @@ class ZSLMerkleTree
 {
 public:
 	ZSLMerkleTree(int16_t depth);
-	~ZSLMerkleTree() {}
+	~ZSLMerkleTree(){}
 	std::vector<string> getEmptyRoots();
 	std::string getEmptyRoot(int64_t depth);
 	std::string combine(std::string& left, std::string& right);
@@ -35,7 +35,6 @@ private:
 	int64_t num_commitments_;
 	std::map<string, int64_t> map_commitment_indices_;
 	std::map<int64_t, string> map_commitments_;
-
 };
 #endif
 
