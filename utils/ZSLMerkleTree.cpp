@@ -2,7 +2,7 @@
 #include"sha256.h"
 #include "common.h"
 #include <algorithm>
-ZSLMerkleTree::ZSLMerkleTree(int16_t depth) {
+ZSLMerkleTree::ZSLMerkleTree(int64_t depth):num_commitments_(0){
 	tree_depth_ = depth;
 	max_num_elements_ = (1 << depth);;
 	_createEmptyRoots(depth);

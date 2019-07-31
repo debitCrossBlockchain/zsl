@@ -9,7 +9,7 @@ using namespace std;
 class ZSLMerkleTree
 {
 public:
-	ZSLMerkleTree(int16_t depth);
+	ZSLMerkleTree(int64_t depth);
 	~ZSLMerkleTree(){}
 	std::vector<string> getEmptyRoots();
 	std::string getEmptyRoot(int64_t depth);

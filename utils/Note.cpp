@@ -1,7 +1,7 @@
 #include "Note.h"
 #include "common.h"
 SproutNote::SproutNote(NoteEncryption& obj, uint64_t value, std::string rho)
-	: BaseNote(value), a_sk_(obj.GetEsk()),a_pk_(obj.GetEsk()), rho_(rho){
+	: BaseNote(value), a_sk_(obj.GetEsk()),a_pk_(obj.GetEpk()), rho_(rho){
 }
 std::string SproutNote::cm(){
 	unsigned char output[32];

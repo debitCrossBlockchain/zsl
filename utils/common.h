@@ -120,7 +120,7 @@ void static inline Sha256Compress(unsigned char* a, unsigned char* b, unsigned c
 std::string static inline Sha256CompressEx(std::string& left, std::string& right) {
 	unsigned char left_output[left.size()/2];
 	unsigned char right_output[right.size()/2];
-	unsigned char* output;
+	unsigned char output[32];
 	HexStringToArray(left, left_output);
 	HexStringToArray(right, right_output);
 	Sha256Compress(left_output, right_output, output);
