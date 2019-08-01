@@ -1,5 +1,10 @@
 # zsl
 
+Windows
+Supports WinXP/2003/Vista/7/8/10 to building，Recommended Win10
+Install Visual Studio Ultimate 2019
+Compile ZslDemo.sln with VS, then get the executable program in the linux dir /root/projects/ZslDemo/bin/x64/
+
 Concretely, here are the requisite packages in some Linux distributions:
 
 On Ubuntu 16.04 LTS:
