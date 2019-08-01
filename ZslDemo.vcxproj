@@ -210,7 +210,7 @@
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>/usr/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <LibraryDependencies>gmpxx;gmp;boost_system;gomp;ncurses;crypto</LibraryDependencies>
+      <LibraryDependencies>gmpxx;gmp;boost_system;gomp;ncurses</LibraryDependencies>
       <IgnoreDefaultLibraries>false</IgnoreDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
