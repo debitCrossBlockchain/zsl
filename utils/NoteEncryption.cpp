@@ -22,6 +22,7 @@ NoteEncryption::NoteEncryption(){
 	GetKeypair(sk,pk);
 	esk_ = ArrayToHexString(sk, 32);
 	epk_ = ArrayToHexString(pk, 32);
+	GetRandomness(erho_, 32);
 }
 
 void NoteEncryption::GetRandomness(std::string& output, int64_t len){
@@ -42,7 +43,6 @@ void NoteEncryption::GetRandomness(unsigned char* output, int64_t len){
 }
 
 std::string NoteEncryption::GetErho(){
-	GetRandomness(erho_, 32);
 	return erho_;
 }
 

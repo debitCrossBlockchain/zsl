@@ -22,7 +22,7 @@ void TestShielding() {
 	std::string proof;
 	std::string rho = objEncryp.GetErho();
 	objZsl.ZslProveShielding(rho, objEncryp.GetEpk(), 365, proof);
-	SproutNote objNote(objEncryp, 365, rho);
+	SendNote objNote(objEncryp, 365, rho);
 	std::string send_nf = objNote.SendNullifier();
 	std::string cm = objNote.cm();
 	bool result = objZsl.ZslVerifyShielding(proof, send_nf, cm, 365);
@@ -36,7 +36,7 @@ void TestShielding() {
 
 void TestUnshielding() {
 	ZSLMerkleTree objTree(29);
-	for (int64_t i = 0; i < 5; i++){
+	for (int64_t i = 0; i < 2; i++){
 		cout << "TestUnshielding "<<i<<" test!" << endl;
 		NoteEncryption objEncryp;
 		ZslApi objZsl;
@@ -60,15 +60,60 @@ void TestUnshielding() {
 }
 
 void TestTransfer(){
+	ZSLMerkleTree objTree(29);
+	NoteEncryption objEnInput1, objEnInput2, objEnOutput1, objEnOutput2;
+	ZslApi objZsl;
+	std::string proof;
 
+	std::string InputRho1 = objEnInput1.GetErho();
+	std::string InputRho2 = objEnInput2.GetErho();
+	std::string OutputRho1 = objEnOutput1.GetErho();
+	std::string OutputRho2 = objEnOutput2.GetErho();
+
+	SproutNote objInNote2(objEnInput2, 0, InputRho2);
+	std::string cm_input2 = objInNote2.cm();
+	std::string spend_nf2 = objInNote2.SpendNullifier();
+	objTree.addCommitment(cm_input2);
+
+	SproutNote objInNote1(objEnInput1, 100, InputRho1);
+	std::string cm_input1 = objInNote1.cm();
+	std::string spend_nf1 = objInNote1.SpendNullifier();
+	objTree.addCommitment(cm_input1);
+	
+
+
+	std::vector<std::string> witness1 = objTree.getWitness(cm_input1);
+	std::vector<std::string> witness2 = objTree.getWitness(cm_input2);
+
+	std::string root = objTree.root();
+	
+
+	objZsl.ZslProveTransfer(proof, InputRho1, objEnInput1.GetEsk(), 100, 1, witness1,
+		InputRho2, objEnInput2.GetEsk(), 0, 0, witness2,
+		OutputRho1, objEnOutput1.GetEpk(),10, OutputRho2, objEnOutput2.GetEpk(), 90);
+
+	SendNote objNoteOut1(objEnOutput1, 10, OutputRho1);
+	SendNote objNoteOut2(objEnOutput2, 90, OutputRho2);
+
+	bool result = objZsl.ZslVerifyTransfer(proof, root, spend_nf1, spend_nf1, objNoteOut1.SendNullifier(),
+		objNoteOut2.SendNullifier(), objNoteOut1.cm(), objNoteOut2.cm());
+	if (!result) {
+		cout << "TestTransfer fail!" << endl;
+	}
+	else {
+		cout << "TestTransfer success!" << endl;
+	}
 }
 
 int main()
 {
+	NoteEncryption objEncryp;
+	string str = objEncryp.GetErho();
+	str = objEncryp.GetErho();
 	printf("hello from ConsoleApplication1!\n");
 	//TestShielding();
-	TestUnshielding();
-	//TestTransfer();
+	//TestUnshielding();
+	TestTransfer();
 	int a = 0;
 	return 0;
 }

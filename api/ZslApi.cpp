@@ -97,7 +97,7 @@ void ZslApi::ZslProveTransfer(
 	uint64_t input_tree_position_2,
 	const std::vector<std::string>& intput_witness_2,
 	const std::string& output_rho_1,
-	std::string& output_pk_1,
+	const std::string& output_pk_1,
 	uint64_t output_value_1,
 	const std::string& output_rho_2,
 	const std::string& output_pk_2,
